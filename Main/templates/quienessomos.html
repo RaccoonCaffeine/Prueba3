@@ -10,12 +10,12 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	{% for item in navbar %}
-	<a class="nav-item nav-link" href={% url item.id_nav %}>{{item.nombre_nav}}</a>
+	<a class="nav-item nav-link" href=/{{item.id_nav}}>{{item.nombre_nav}}</a>
 	{% endfor %}
   </head>
   <body>
 	  <h1>
-		Home
+		Quienes
 	  </h1>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
