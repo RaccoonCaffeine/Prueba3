@@ -8,14 +8,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         .bebas-neue-regular {
         font-family: "Bebas Neue", sans-serif;
         font-weight: 400;
         font-style: normal;}
+        .rowdies-light {
+        font-family: "Rowdies", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        }
+
+        .rowdies-regular {
+        font-family: "Rowdies", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .rowdies-bold {
+        font-family: "Rowdies", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        }
     </style>
     
     <!-- Bootstrap CSS -->
@@ -33,7 +54,11 @@
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             {% for item in navbar %}
-            <a class="nav-item nav-link mt-2 ml-2" href="{% url item.id_nav %}" style="font-family: 'Bebas Neue', sans-serif; font-size: 30px; align-self: flex-end;">{{item.nombre_nav}}</a>
+                {% if item.nombre_nav == Titulo %}
+                    <a class="nav-item nav-link active mt-2 ml-2" href="{% url item.id_nav %}" style="font-family: 'Bebas Neue'; font-size: 30px; align-self: flex-end;">{{item.nombre_nav}}</a>
+                {% else %}
+                    <a class="nav-item nav-link mt-2 ml-2" href="{% url item.id_nav %}" style="font-family: 'Bebas Neue'; font-size: 30px; align-self: flex-end;">{{item.nombre_nav}}</a>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>
@@ -42,8 +67,8 @@
 <!-- Informacion general -->
 <div class="container-fluid">
     <div class="row mx-auto">
-        <div class="col-md-8 mx-auto text-center">
-            <h1>InnovaNow</h1>
+        <div class="col-md-8 mx-auto mt-5 text-center ">
+            <h1 style="font-family: 'Rowdies'; font-size: 60px; align-self: flex-end;">InnovaNow</h1>
         </div>
     </div>
     <div class="row mx-auto">
