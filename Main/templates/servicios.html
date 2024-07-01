@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,10 +9,20 @@
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-	{% for item in navbar %}
-	<a class="nav-item nav-link" href={% url item.id_nav %}>{{item.nombre_nav}}</a>
-	{% endfor %}
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+			aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavId">
+		  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			{% for item in navbar %}
+			<a class="nav-item nav-link" href={% url item.id_nav %}>{{item.nombre_nav}}</a>
+			  {% endfor %}
+		  </ul>
+		</div>
+	  </nav>
   </head>
   <body>
 	  <h1>
