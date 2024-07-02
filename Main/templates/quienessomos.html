@@ -15,35 +15,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        .bebas-neue-regular {
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 400;
-        font-style: normal;}
-        .rowdies-light {
-        font-family: "Rowdies", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        }
-
-        .rowdies-regular {
-        font-family: "Rowdies", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        }
-
-        .rowdies-bold {
-        font-family: "Rowdies", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        }
-    </style>
-    
+    <link rel="stylesheet" href="{%static 'css/fonts.css'%}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
 </head>
-<body style="background-size: 100%; background-image: url('{%static 'img/back.jpg'%}');">  
-<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1c4066;">
+<body style="background: linear-gradient(90deg, #2e002e 0%, #643f83 50%, #111a2b 100%);">  
+<nav class="navbar navbar-expand-md navbar-dark" style="background: linear-gradient(90deg, rgba(234,121,183,1) 0%, rgba(126,81,162,1) 50%, rgba(55,51,148,1) 100%);">
     <a class="navbar-brand mr-2" href="/index">
         <img src="{%static 'img/lg.png'%}" class="img-fluid" width="50" height="50" class="d-block">
     </a>
@@ -63,18 +40,21 @@
         </ul>
     </div>
 </nav>
-<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1a3a5c;"></nav>
-<!-- Informacion general -->
-<div class="container-fluid">
-    <div class="row mx-auto">
-        <div class="col-md-8 mx-auto mt-5 text-center ">
-            <h1 style="font-family: 'Rowdies'; font-size: 60px; align-self: flex-end;">InnovaNow</h1>
+
+<h1>
+    <div class="container justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center" style="margin: 100px;">
+            <div class="col-md-12 align-items-center">
+                {% for item in quienes %}
+                <h1 class="py-3" style="font-family: 'Rowdies'; color: #ffffff; font-size: 40px; text-align: center;">{{item.titulo_quienes}}</h1>
+                <h3 class="py-3" style="font-family: 'Rowdies'; color: #ffffff; font-size: 20px; text-align: center;">{{item.descripcion_quienes}}</h3>
+                {% endfor %}
+                <center><img src="{%static 'img/lg.png'%}" style="width: 400px;" class="pt-5"></center>
+            </div>
         </div>
     </div>
-    <div class="row mx-auto">
-        
-    </div>
-</div>
+</h1>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -15,35 +15,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        .bebas-neue-regular {
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 400;
-        font-style: normal;}
-        .rowdies-light {
-        font-family: "Rowdies", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        }
-
-        .rowdies-regular {
-        font-family: "Rowdies", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        }
-
-        .rowdies-bold {
-        font-family: "Rowdies", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        }
-    </style>
-    
+    <link rel="stylesheet" href="{%static 'css/fonts.css'%}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+    <style>
+        .banner-inn { 
+            position: relative; 
+        } 
+        .texto-banner-inn { 
+            position: absolute; 
+            top: 45%; 
+            left: 0; 
+            width: 100%; 
+        } 
+    </style>
 </head>
-<body style="background-size: 100%; background-image: url('{%static 'img/back.jpg'%}');">  
-<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1c4066;">
+<body style="background: linear-gradient(90deg, #2e002e 0%, #643f83 50%, #111a2b 100%);">  
+<nav class="navbar navbar-expand-md navbar-dark" style="background: linear-gradient(90deg, #963e6e 0%, #7e51a2 50%, #373394 100%);">
     <a class="navbar-brand mr-2" href="/index">
         <img src="{%static 'img/lg.png'%}" class="img-fluid" width="50" height="50" class="d-block">
     </a>
@@ -63,18 +51,43 @@
         </ul>
     </div>
 </nav>
-<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1a3a5c;"></nav>
-<!-- Informacion general -->
-<div class="container-fluid">
-    <div class="row mx-auto">
-        <div class="col-md-8 mx-auto mt-5 text-center ">
-            <h1 style="font-family: 'Rowdies'; font-size: 60px; align-self: flex-end;">InnovaNow</h1>
+
+<!-- Banner -->
+<div class="container-fluid px-0">
+    <div class="row align-content-start">
+        <div class="banner-inn col-12 img-fluid">
+            <img src="{%static 'img/rocket.jpg'%}" alt="" style="width: 2600px;height: 900px">
+        </div>
+        <div class="texto-banner-inn col-auto pl-5">
+            <h1 class="align-text-top col-auto" style="font-family: 'Rowdies'; color: white; font-size: 60px;">¡Lleva tu start-up al siguiente nivel!</h1>
+            <h1 class="align-top pt-2 col-auto" style="font-family: 'Rowdies'; color: white; font-size: 30px;">Te lanzamos con toda la fuerza posible, porque sabemos que la necesitas y porque no es momento de ponerse límites.</h1>
         </div>
     </div>
-    <div class="row mx-auto">
-        
+</div>
+
+<!-- Informacion -->
+<div class="container-fluid">
+    <div class="row p-3">
+        <div class="col-md-4 col-auto px-5 p-5 align-content-center" style="max-height: 50%;">
+            <h2 style="font-family: 'Rowdies';color: white;" class="text-break">
+                Nuestra metodología está diseñada para llevar tu start-up al siguiente nivel apoyándonos en la experiencia real de nuestros mentores, 
+                te ofrecemos una ruta personalizada para tu startup.
+                Nosotros no somos una academia, somos mentores reales, transfiriendo nuestra experiencia y conocimiento a emprendedores seleccionados que quieren aventurarse al mismo camino.
+            </h2>
+        </div>
+        <div class="col-md-4 col-auto align-content-center">
+            <img src="{% static 'img/rocket.png' %}" class="" alt="Rocket League" style="width: 40%;">
+        </div>
+        <div class="col-md-4 col-auto align-content-center">
+            <h2 style="font-family: 'Rowdies';color: white;" class="text-break">
+                Somos una aceleradora y fondo de inversión privado que desde el 2024 invierte y acelera
+            </h2>
+            <a href="/servicios"><button type="button" class="btn btn-dark btn-lg mx-auto d-block" style="background: linear-gradient(0deg, rgba(85,57,112,1) 0%, rgba(21,10,26,1) 100%); max-width: 100%;">POSTULAR</button></a>
+            </button>
+        </div>
     </div>
 </div>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
